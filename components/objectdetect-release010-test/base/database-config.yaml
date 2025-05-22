@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: objectdetect-release010-test-database-config
+data:
+  VECTORDB_HOST: "objectdetect-release010-test-database"
+  VECTORDB_PORT: ""

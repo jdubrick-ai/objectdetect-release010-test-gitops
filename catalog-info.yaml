@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: objectdetect-release010-test-gitops
+  description: This is GitOps manifest for objectdetect-release010-test   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: objectdetect-release010-test
+    janus-idp.io/tekton: objectdetect-release010-test 
+    backstage.io/kubernetes-id: objectdetect-release010-test 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:objectdetect-release010-test

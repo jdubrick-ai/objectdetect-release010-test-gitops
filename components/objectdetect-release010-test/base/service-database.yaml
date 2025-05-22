@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: objectdetect-release010-test-database
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: objectdetect-release010-test-database 
+  name: objectdetect-release010-test-database
+spec:
+  ports:
+  - port: 
+    protocol: TCP
+    targetPort: 
+  selector:
+    app.kubernetes.io/instance: objectdetect-release010-test-database 
